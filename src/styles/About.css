@@ -1,0 +1,85 @@
+.about {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Image */
+.about-image img {
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Content */
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-content span {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Skills */
+.skills {
+  margin-top: 20px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: #e3e3e3;
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 180px;
+  }
+}

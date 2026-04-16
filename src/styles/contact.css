@@ -1,0 +1,99 @@
+.contact {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.contact-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Form */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Social Links */
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  display: block;
+  margin-bottom: 8px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
