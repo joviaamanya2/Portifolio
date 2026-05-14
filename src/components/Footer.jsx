@@ -7,8 +7,8 @@ function Footer() {
 
         {/* Left - Name */}
         <div className="footer-brand">
-          <h2>Your Name</h2>
-          <p>Frontend Developer</p>
+          <h2>Amanya Jovia</h2>
+          <p>Software Developer</p>
         </div>
 
         {/* Middle - Links */}

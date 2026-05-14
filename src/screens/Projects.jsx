@@ -58,9 +58,9 @@ function Projects() {
           <div className="project-card">
 
             <div className="project-info">
-              <h3>Weather App</h3>
+              <h3>Fruit Design Website</h3>
               <p>
-                A weather app that fetches real-time weather data from an API.
+                Helps fruitdesign business to enhance its online presence to its online customers in order to increase sales as well as the growth of the business in this competetive world.
               </p>
 
               <div className="tech">
