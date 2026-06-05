@@ -3,43 +3,33 @@ import '../styles/Footer.css'
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="footer-container container">
 
-        {/* Left - Name */}
         <div className="footer-brand">
           <h2>Amanya Jovia</h2>
-          <p>Software Developer</p>
+          <p>Application Developer</p>
         </div>
 
-        {/* Middle - Links */}
-        <div className="footer-links">
+        <nav className="footer-links" aria-label="Footer Navigation">
           <h3>Quick Links</h3>
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>
+        </nav>
 
-        {/* Right - Socials */}
         <div className="footer-socials">
           <h3>Follow Me</h3>
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer">
-            Twitter
-          </a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer">Twitter</a>
         </div>
 
       </div>
 
-      {/* Bottom */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Amanya Jovia. All rights reserved.</p>
       </div>
     </footer>
   )

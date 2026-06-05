@@ -1,79 +1,71 @@
 import '../styles/projects.css'
 
+function ProjectCard({ image, title, children, tech = [], live = '#', repo = '#' }) {
+  return (
+    <article className="project-card" aria-label={title}>
+      {image && (
+        <div className="project-media">
+          <img src={image} alt={`${title} screenshot`} />
+        </div>
+      )}
+
+      <div className="project-info">
+        <h3>{title}</h3>
+        <p>{children}</p>
+
+        <div className="tech">
+          {tech.map((t) => (
+            <span key={t}>{t}</span>
+          ))}
+        </div>
+
+        <div className="links">
+          <a href={live} target="_blank" rel="noreferrer">Live Demo</a>
+          <a href={repo} target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </article>
+  )
+}
+
 function Projects() {
   return (
     <section className="projects" id="projects">
-      <div className="projects-container">
+      <div className="projects-container container">
 
         <h2>My Projects</h2>
-        <p>Here are some of the projects I’ve worked on:</p>
+        <p>Here are a few projects that show my approach to front-end development and UX.</p>
 
         <div className="projects-grid">
+          <ProjectCard
+            image="/src/assets/hero.png"
+            title="Portfolio Website"
+            tech={["React", "CSS"]}
+            live="#"
+            repo="#"
+          >
+            A personal portfolio built with React to showcase projects, accessibility, and responsive design.
+          </ProjectCard>
 
-          {/* Project 1 */}
-          <div className="project-card">
-            
+          <ProjectCard
+            image="/src/assets/hero.png"
+            title="Todo App"
+            tech={["JavaScript", "HTML", "CSS"]}
+            live="#"
+            repo="#"
+          >
+            A small productivity app demonstrating state management and local persistence.
+          </ProjectCard>
 
-            <div className="project-info">
-              <h3>Portfolio Website</h3>
-              <p>
-                A personal portfolio website built using React to showcase my skills and projects.
-              </p>
-
-              <div className="tech">
-                <span>React</span>
-                <span>CSS</span>
-              </div>
-
-              <div className="links">
-                <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          {/* Project 2 */}
-          <div className="project-card">
-
-            <div className="project-info">
-              <h3>Todo App</h3>
-              <p>
-                A simple todo application that allows users to add, delete, and manage tasks.
-              </p>
-
-              <div className="tech">
-                <span>JavaScript</span>
-                <span>HTML</span>
-                <span>CSS</span>
-              </div>
-
-              <div className="links">
-                <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          {/* Project 3 */}
-          <div className="project-card">
-
-            <div className="project-info">
-              <h3>Fruit Design Website</h3>
-              <p>
-                Helps fruitdesign business to enhance its online presence to its online customers in order to increase sales as well as the growth of the business in this competetive world.
-              </p>
-
-              <div className="tech">
-                <span>React</span>
-                <span>API</span>
-              </div>
-
-              <div className="links">
-                <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </div>
+          <ProjectCard
+            image="/src/assets/hero.png"
+            title="Fruit Design Website"
+            tech={["React", "API"]}
+            live="#"
+            repo="#"
+          >
+            A small marketing site built to help a local business improve online presence and conversions.
+          </ProjectCard>
 
         </div>
 

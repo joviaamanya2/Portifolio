@@ -4,47 +4,39 @@ function About() {
   return (
     <section className="about" id="about">
       <div className="about-container">
-        
-        {/* Left Side - Image */}
+
         <div className="about-image">
-          <img 
-            src="/profile.PNG" 
-            alt="Profile" 
-          />
+          <img src="/profile.PNG" alt="Jovia Amanya" />
         </div>
 
-        {/* Right Side - Content */}
         <div className="about-content">
           <h2>About Me</h2>
-
-          <p>
-            Hi, I'm <span>Jovia Amanya</span>, a passionate Applications developer who loves
-            building clean, responsive, and user-friendly  applications and systems.
+          <p className="lead">
+            I’m <span>Jovia Amanya</span>, an Application Developer building
+            modern, accessible, and performant web applications with React.
           </p>
 
           <p>
-            I specialize in creating modern interfaces using React and enjoy
-            turning ideas into real, functional products. I’m constantly learning
-            new technologies and improving my skills.
+            I focus on delivering clean interfaces, thoughtful UX, and
+            well-tested code. My work spans single-page apps, component
+            libraries, and responsive layouts that perform across devices.
           </p>
 
           <p>
-            When I’m not coding, I enjoy exploring new tech, solving problems,
-            and working on personal projects that challenge me to grow.
+            I’m curious by nature and continuously learning new tools and
+            patterns to improve product quality and developer experience.
           </p>
 
-          {/* Skills */}
           <div className="skills">
-            <h3>Skills</h3>
+            <h3>Core Skills</h3>
             <ul>
               <li>JavaScript (ES6+)</li>
-              <li>React</li>
-              <li>HTML & CSS</li>
-              <li>Git & GitHub</li>
+              <li>React & Hooks</li>
+              <li>Responsive UI / CSS</li>
+              <li>Git, Testing & CI</li>
             </ul>
           </div>
 
-          {/* Button */}
           <a href="/cv.pdf" className="btn" download>
             Download CV
           </a>
