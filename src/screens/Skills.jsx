@@ -1,12 +1,13 @@
-import '../styles/skills.css'
 
 function Skills() {
   return (
-    <section className="skills" id="skills">
-      <div className="skills-container">
-
-        <h2>My Skills</h2>
-        <p>Here are the technologies and tools I work with:</p>
+    <section className="skills-section section" id="skills">
+      <div className="container">
+        <div className="section-heading">
+          <span className="eyebrow">What I work with</span>
+          <h2>Skills & tools</h2>
+          <p>A practical toolkit for building polished, accessible experiences from idea to launch.</p>
+        </div>
 
         <div className="skills-grid">
 
@@ -18,6 +19,7 @@ function Skills() {
               <li>CSS3</li>
               <li>JavaScript (ES6+)</li>
               <li>React</li>
+              <li>Flutter , dart</li>
             </ul>
           </div>
 
@@ -27,6 +29,7 @@ function Skills() {
             <ul>
               <li>Node.js</li>
               <li>Express</li>
+              <li>Laravel,php</li>
             </ul>
           </div>
 
@@ -37,6 +40,16 @@ function Skills() {
               <li>Git</li>
               <li>GitHub</li>
               <li>VS Code</li>
+            </ul>
+          </div>
+
+          {/* Embedded systems */}
+          <div className="skill-card">
+            <h3>Embedded Systems</h3>
+            <ul>
+              <li>Embedded systems development</li>
+              <li>Microcontroller programming</li>
+              <li>Hardware and software integration</li>
             </ul>
           </div>
 

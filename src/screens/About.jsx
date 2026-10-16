@@ -1,47 +1,19 @@
-import '../styles/About.css'
-
 function About() {
   return (
-    <section className="about" id="about">
-      <div className="about-container">
-
-        <div className="about-image">
-          <img src="/profile.PNG" alt="Jovia Amanya" />
-        </div>
-
+    <section className="about section" id="about">
+      <div className="about-container container">
         <div className="about-content">
-          <h2>About Me</h2>
-          <p className="lead">
-            I’m <span>Jovia Amanya</span>, an Application Developer building
-            modern, accessible, and performant web applications with React.
-          </p>
-
-          <p>
-            I focus on delivering clean interfaces, thoughtful UX, and
-            well-tested code. My work spans single-page apps, component
-            libraries, and responsive layouts that perform across devices.
-          </p>
-
-          <p>
-            I’m curious by nature and continuously learning new tools and
-            patterns to improve product quality and developer experience.
-          </p>
-
+          <span className="eyebrow">A little about me</span>
+          <h2>Curious by nature.<br />Developer by craft.</h2>
+          <p className="lead">I’m Jovia Amanya, an application developer building modern, accessible web experiences with React.</p>
+          <p>I care about clean interfaces, thoughtful details, and responsive layouts that feel natural to use across devices.</p>
+          <p>I’m always learning and looking for ways to make digital products clearer, more useful, and more enjoyable.</p>
           <div className="skills">
-            <h3>Core Skills</h3>
-            <ul>
-              <li>JavaScript (ES6+)</li>
-              <li>React & Hooks</li>
-              <li>Responsive UI / CSS</li>
-              <li>Git, Testing & CI</li>
-            </ul>
+            <h3>Core skills</h3>
+            <ul><li>JavaScript</li><li>React</li><li>Responsive UI</li><li>Git & GitHub</li></ul>
           </div>
-
-          <a href="/cv.pdf" className="btn" download>
-            Download CV
-          </a>
+          <a href="/CV.pdf" className="btn" download>Download my CV <span aria-hidden="true">↓</span></a>
         </div>
-
       </div>
     </section>
   )

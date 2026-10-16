@@ -1,28 +1,18 @@
-import '../styles/projects.css'
 
-function ProjectCard({ image, title, children, tech = [], live = '#', repo = '#' }) {
+const projects = [
+  { title: 'Personal portfolio', description: 'A responsive home for selected work, skills, and ways to get in touch.', tech: ['React', 'CSS', 'Responsive design'], mark: 'JA' },
+  { title: 'Task manager concept', description: 'A focused productivity app concept for organizing tasks and keeping daily plans clear.', tech: ['JavaScript', 'HTML', 'CSS'], mark: '01' },
+  { title: 'Local business website', description: 'A bright marketing site concept designed to help a small business reach new customers.', tech: ['React', 'UI design', 'Accessibility'], mark: '02' },
+]
+
+function ProjectCard({ title, description, tech, mark }) {
   return (
-    <article className="project-card" aria-label={title}>
-      {image && (
-        <div className="project-media">
-          <img src={image} alt={`${title} screenshot`} />
-        </div>
-      )}
-
+    <article className="project-card">
+      <div className="project-media" aria-hidden="true"><span className="project-placeholder">{mark}</span></div>
       <div className="project-info">
         <h3>{title}</h3>
-        <p>{children}</p>
-
-        <div className="tech">
-          {tech.map((t) => (
-            <span key={t}>{t}</span>
-          ))}
-        </div>
-
-        <div className="links">
-          <a href={live} target="_blank" rel="noreferrer">Live Demo</a>
-          <a href={repo} target="_blank" rel="noreferrer">GitHub</a>
-        </div>
+        <p>{description}</p>
+        <div className="tech">{tech.map((item) => <span key={item}>{item}</span>)}</div>
       </div>
     </article>
   )
@@ -30,45 +20,14 @@ function ProjectCard({ image, title, children, tech = [], live = '#', repo = '#'
 
 function Projects() {
   return (
-    <section className="projects" id="projects">
+    <section className="projects section" id="projects">
       <div className="projects-container container">
-
-        <h2>My Projects</h2>
-        <p>Here are a few projects that show my approach to front-end development and UX.</p>
-
-        <div className="projects-grid">
-          <ProjectCard
-            image="/src/assets/hero.png"
-            title="Portfolio Website"
-            tech={["React", "CSS"]}
-            live="#"
-            repo="#"
-          >
-            A personal portfolio built with React to showcase projects, accessibility, and responsive design.
-          </ProjectCard>
-
-          <ProjectCard
-            image="/src/assets/hero.png"
-            title="Todo App"
-            tech={["JavaScript", "HTML", "CSS"]}
-            live="#"
-            repo="#"
-          >
-            A small productivity app demonstrating state management and local persistence.
-          </ProjectCard>
-
-          <ProjectCard
-            image="/src/assets/hero.png"
-            title="Fruit Design Website"
-            tech={["React", "API"]}
-            live="#"
-            repo="#"
-          >
-            A small marketing site built to help a local business improve online presence and conversions.
-          </ProjectCard>
-
+        <div className="section-heading">
+          <span className="eyebrow">Selected work</span>
+          <h2>Made with intention</h2>
+          <p>A few examples of the kind of useful, welcoming digital experiences I enjoy building.</p>
         </div>
-
+        <div className="projects-grid">{projects.map((project) => <ProjectCard key={project.title} {...project} />)}</div>
       </div>
     </section>
   )
